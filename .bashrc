@@ -115,3 +115,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+
+#cs50 setup
+CC=clang
+CFLAGS=-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow
+LDLIBS=-lcrypt -lcs50 -lm
+export LIBRARY_PATH=/usr/local/lib
+
+
+#autojump
+ [[ -s /home/justincj/.autojump/etc/profile.d/autojump.sh  ]] && source /home/justincj/.autojump/etc/profile.d/autojump.sh

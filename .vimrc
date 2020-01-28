@@ -38,10 +38,13 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'mattn/emmet-vim'
 
+
 " add higlight at bottom
 Plugin 'itchyny/lightline.vim'
 
 Plugin 'dense-analysis/ale'
+
+Plugin 'machakann/vim-highlightedyank'
 
 " Pretty 
 Plugin 'prettier/vim-prettier'
