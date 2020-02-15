@@ -11,9 +11,13 @@ filetype off  "required
 " esc in insert mode
 inoremap kj <esc>
 
+nmap Q <Nop>
 
-set rtp+=/usr/local/opt/fzf
+set incsearch
 
+
+
+set rtp+=~/.fzf
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
