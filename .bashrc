@@ -1,5 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
 # for examples
 
 # If not running interactively, don't do anything
@@ -117,13 +118,27 @@ if ! shopt -oq posix; then
 fi
 
 
-
-#cs50 setup
-CC=clang
-CFLAGS=-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow
-LDLIBS=-lcrypt -lcs50 -lm
-export LIBRARY_PATH=/usr/local/lib
-
-
 #autojump
  [[ -s /home/justincj/.autojump/etc/profile.d/autojump.sh  ]] && source /home/justincj/.autojump/etc/profile.d/autojump.sh
+
+
+#alias
+alias clr='clear'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+#mkcd
+
+source ~/scripts/myscripts
+
+#bash prompt shorteinging
+
+
+
+# cs50
+alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-lcs50 -lm -lcrypt"'
+
+
+
+#python:
+alias python=python3
